@@ -70,7 +70,7 @@ collections:
       #           name: 'introduction'
       #           widget: 'text'
       - name: 'technologies'
-        label: 'Technologies and frameworks'
+        label: 'Technologies'
         file: 'meta/technologies.yml'
         description: 'List of technologies and frameworks'
         fields:
@@ -216,7 +216,7 @@ collections:
             - 'technologies.*.name'
           displayFields:
             - 'technologies.*.name'
-          valueField: 'technologies.*.slug'
+          valueField: 'technologies.*.name'
       - label: 'About'
         name: 'about'
         widget: 'text'
