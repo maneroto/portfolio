@@ -201,25 +201,25 @@ collections:
       - label: 'Collaborators'
         name: 'collaborators'
         widget: 'string'
+      - label: Technologies
+        label_singular: 'Technologies'
+        name: 'technologies'
+        widget: list
+        summary: '{{fields.technology}}'
+        field:
+          label: Technology
+          name: technology
+          widget: relation
+          collection: 'meta'
+          file: 'technologies'
+          searchFields:
+            - 'technologies.*.name'
+          displayFields:
+            - 'technologies.*.name'
+          valueField: 'technologies.*.slug'
       - label: 'About'
         name: 'about'
         widget: 'text'
       - label: 'Body'
         name: 'body'
         widget: 'markdown'
-      - label: Tags
-        label_singular: 'Tag'
-        name: 'tags'
-        widget: list
-        summary: '{{fields.tag}}'
-        field:
-          label: Tag
-          name: tag
-          widget: relation
-          collection: 'meta'
-          file: 'tags'
-          searchFields:
-            - 'tags.*.name'
-          displayFields:
-            - 'tags.*.name'
-          valueField: 'tags.*.slug'
