@@ -166,7 +166,7 @@ collections:
         widget: 'markdown'
 
   - name: 'projects'
-    label: 'Project'
+    label: 'Projects'
     folder: 'content/projects/'
     extension: 'mdx'
     format: 'frontmatter'
