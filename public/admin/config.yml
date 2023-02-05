@@ -115,6 +115,7 @@ collections:
 
   - name: 'posts'
     label: 'Posts'
+    label_singular: 'Post'
     folder: 'content/posts/'
     extension: 'mdx'
     format: 'frontmatter'
@@ -167,6 +168,7 @@ collections:
 
   - name: 'projects'
     label: 'Projects'
+    label_singular: 'Project'
     folder: 'content/projects/'
     extension: 'mdx'
     format: 'frontmatter'
