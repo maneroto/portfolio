@@ -79,8 +79,8 @@ collections:
             label_singular: 'Technology'
             widget: list
             fields:
-              - label: 'Title'
-                name: 'title'
+              - label: 'Name'
+                name: 'name'
                 widget: 'string'
               - label: 'Image'
                 name: 'image'
@@ -202,7 +202,7 @@ collections:
         name: 'collaborators'
         widget: 'string'
       - label: Technologies
-        label_singular: 'Technologies'
+        label_singular: 'Technology'
         name: 'technologies'
         widget: list
         summary: '{{fields.technology}}'
