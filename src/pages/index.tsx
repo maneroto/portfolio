@@ -3,10 +3,39 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { OrbitControls, Text } from "@react-three/drei";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Suspense } from "react";
 
 export default function Index() {
+  const gltf = useLoader(GLTFLoader, './issum/scene.gltf');
   return (
     <Layout>
+      <Canvas        
+        shadows
+        camera={ {
+            fov: 45,
+            near: 0.1,
+            far: 200,
+            position: [ 0, 0, 20 ]
+          } }
+      >
+        <Text 
+          font='./fonts/Kalam/Bold/Kalam-Bold.woff' 
+          position={[0, 3, 0]}  
+          color="salmon"
+          fontSize={1}
+        >
+          MANEROTO
+        </Text>
+        <OrbitControls />
+        <directionalLight position={[ 1, 2, 3] } intensity={1.5} />
+        <ambientLight intensity={ 0.5 } />
+        <Suspense fallback={null}>
+          <primitive object={gltf.scene} />
+        </Suspense>
+      </Canvas>
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
